@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Box, Flex, Grid, HStack, Heading, Input, ListItem, Select, Text, List, VStack, TableContainer, Table, Thead, Th, Tbody, Td, Tr} from '@chakra-ui/react'
+import { Box, Flex, Grid, HStack, Heading, Input, Select, Text, VStack, TableContainer, Table, Thead, Th, Tbody, Td, Tr} from '@chakra-ui/react'
 import { CyclesInput } from './cycles-input'
 import { Organization } from './types/organization';
 
@@ -137,7 +137,7 @@ function App() {
               <option disabled value="hexa">Hexadecimal</option>
             </Select>
             <Grid placeItems={'center'} w={'full'} h={'full'}>
-              <Input p={1} onInput={e => handleFileChange(e)} type={'file'} />
+              <Input p={1} onInput={(e: React.ChangeEvent<HTMLInputElement>)=> handleFileChange(e)} type={'file'} />
               <Flex h={'full'} w={'full'} px={4} borderWidth={'1px'} borderRadius={'md'}>
               <TableContainer w={'full'}>
                 <Table variant='simple'>
@@ -247,7 +247,7 @@ function App() {
                 <HStack w={''} bgColor={'gray.50'} p={4} borderRadius={'md'} borderWidth={'1px'} borderColor={'gray.100'}>
                   <Text fontWeight={'bold'}>Melhor desempenho:</Text>
                   {
-                    program?.bestPerformance === 1
+                    program?.bestPerformance === '1'
                       ? <Text>Mesmo desempenho</Text> :
                       <>
                         <Text>{program.bestPerformance}</Text>

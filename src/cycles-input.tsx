@@ -1,4 +1,4 @@
-import { VStack, Input, Heading, InputGroup, InputLeftAddon, Spacer, InputRightAddon } from '@chakra-ui/react'
+import { VStack, Input, Heading, InputGroup, InputLeftAddon, Spacer } from '@chakra-ui/react'
 import { Organization } from './types/organization'
 
 type CyclesInputProps = {
